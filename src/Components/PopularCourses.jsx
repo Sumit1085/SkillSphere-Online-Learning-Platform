@@ -16,7 +16,7 @@ const PopularCourses = async () => {
                     limitedData.map(data => <CourseCard key={data.id} data={data}></CourseCard>)
                 }
             </div>
-            <Button>Browse More Courses</Button>
+            <Button className='block mx-auto bg-[#1A146B]'>Browse More Courses</Button>
         </div>
     );
 };
