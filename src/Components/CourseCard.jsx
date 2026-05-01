@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const CourseCard = ({ data }) => {
@@ -43,7 +44,7 @@ const CourseCard = ({ data }) => {
 
                     {/* Button */}
                     <button className="w-full border border-indigo-500 text-indigo-600 py-2 rounded-lg font-medium hover:bg-indigo-50 transition">
-                        View Details
+                        <Link href={`/courses/${data.id}`}>View Details</Link>
                     </button>
                 </div>
             </div>
