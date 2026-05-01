@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.ibb.co.com/5xxtqrdp/image.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced JavaScript Mastery",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Deep dive into modern JavaScript concepts and patterns.",
+    "image": "https://i.ibb.co.com/bMpzp9Hr/image.png",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Michael Lee",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn the basics of user interface and user experience design.",
+    "image": "https://i.ibb.co.com/8g1VPSzP/image.png",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Data Structures & Algorithms",
+    "instructor": "Sarah Johnson",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master DSA concepts for coding interviews and problem-solving.",
+    "image": "https://i.ibb.co.com/PsqdghGy/image.png",
+    "category": "Computer Science"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "David Brown",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Analyze data and build models using Python libraries.",
+    "image": "https://i.ibb.co.com/qLFYW3N1/image.png",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "Emily Davis",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build cross-platform mobile apps using Flutter and Dart.",
+    "image": "https://i.ibb.co.com/rRJ0T7fk/image.png",
+    "category": "Development"
+  }
+]
