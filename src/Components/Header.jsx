@@ -1,9 +1,15 @@
 'use client'
 
-
-import { Button } from '@heroui/react';
+import { authClient } from "@/lib/auth-client"
+import { Button, Spinner } from '@heroui/react';
+import Image from "next/image";
 import Link from 'next/link';
 const Header = () => {
+
+
+
+    const { data: session, isPending } = authClient.useSession()
+    const user = session?.user
     return (
         <div>
 
@@ -17,14 +23,42 @@ const Header = () => {
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/courses">Courses</Link></li>
                         <li><Link href="#">My Profile</Link></li>
-                        
+
                     </ul>
 
                     <div className='flex gap-3'>
-                        
-                            <Button>Login</Button>
-                            <Button>Register</Button>
-                        
+
+                        {
+                            user ?
+                                (
+                                    <div className="flex items-center gap-3">
+                                        <h2>Hello, {user.name}</h2>
+                                        <Image
+                                            src={session.user.image || "/default-avatar.png"}
+                                            alt="avatar" width={50} height={50}
+                                            className="w-8 h-8 rounded-full"
+                                        />
+                                        <button
+                                            onClick={async () => {
+                                                await authClient.signOut();
+                                            }}
+                                            className="px-3 py-1 bg-red-500 text-white rounded cursor-pointer"
+                                        >
+                                            Sign Out
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <Button>
+                                            <Link href="/login">Login</Link>
+                                        </Button>
+                                        <Button>
+                                            <Link href="/signup">Register</Link>
+                                        </Button>
+                                    </>
+                                )
+                        }
+
                     </div>
                 </header>
             </nav>

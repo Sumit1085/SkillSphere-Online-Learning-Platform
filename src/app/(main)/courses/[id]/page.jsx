@@ -1,4 +1,5 @@
 import { getCourseData } from "@/lib/data";
+import { Avatar } from "@heroui/react";
 import Image from "next/image";
 
 const CourseDetailsPage = async ({ params }) => {
@@ -76,13 +77,10 @@ const CourseDetailsPage = async ({ params }) => {
         <div className="md:col-span-2 bg-white p-6 rounded-xl shadow">
 
           <div className="flex gap-4 items-center">
-            <Image
-              src="https://i.pravatar.cc/100"
-              alt="instructor"
-              width={60}
-              height={60}
-              className="rounded-full"
-            />
+            <Avatar>
+        <Avatar.Image alt="John Doe" src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3" />
+        <Avatar.Fallback>JD</Avatar.Fallback>
+      </Avatar>
 
             <div>
               <h3 className="font-bold">{course.instructor}</h3>
