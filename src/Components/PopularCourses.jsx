@@ -8,7 +8,6 @@ const PopularCourses = async () => {
 
     const datas = await getCourseData();
 
-    console.log(datas)
     const limitedData = datas.slice(0, 3)
 
     return (

@@ -23,12 +23,13 @@ const CoursesPage = () => {
     course.title.toLowerCase().includes(search.toLowerCase())
   );
 
+
   return (
     <div className="bg-[#EFF4FF]">
-      <div className="container mx-auto p-20">
+      <div className="container mx-auto p-5 md:p-20">
 
         {/* HEADER */}
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
             <h2 className="text-[#1A146B] text-5xl font-bold">
               Explore Courses
@@ -38,7 +39,7 @@ const CoursesPage = () => {
             </p>
           </div>
 
-          <SearchField name="search">
+          <SearchField className="mt-5 md:mt-0" name="search">
             <Label>Search</Label>
             <SearchField.Group>
               <SearchField.SearchIcon />
@@ -53,7 +54,7 @@ const CoursesPage = () => {
           </SearchField>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-10 mt-10">
           {filteredCourses.length > 0 ? (
             filteredCourses.map((data) => (
               <div key={data.id}>
