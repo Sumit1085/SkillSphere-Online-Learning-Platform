@@ -15,7 +15,6 @@ export async function proxy(request) {
         return NextResponse.redirect(new URL('/login', request.url))
     }
 
-    console.log(session, 'session')
 }
  
 // Alternatively, you can use a default export:
